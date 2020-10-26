@@ -1,0 +1,45 @@
+vim modified.txt
+git log --oneline --decorate --graph --all
+e152e20 (HEAD -> new_branch2, origin/main, origin/HEAD, new_branch, main) Initial commit
+input:git checkout new_branch
+output:Switched to branch 'new_branch'
+ git add .
+git commit -m  'commit first modified'
+input: git log --oneline --decorate --graph --all
+output: * 9727475 (HEAD -> new_branch) commit first modified
+* e152e20 (origin/main, origin/HEAD, new_branch2, main) Initial commit
+input: git checkout -b ustory_123_test
+output: Switched to a new branch 'ustory_123_test'
+ vim modified.txt
+ git add .
+input:git commit -m 'first modification'
+output: [ustory_123_test a2e1176] first modification
+ 1 file changed, 1 insertion(+)
+ create mode 100644 modified.txt
+input: git checkout new_branch
+output: Switched to branch 'new_branch'
+ vim modified2.txt
+ git add .
+ git commit -m 'added modified2.txt'
+input: git checkout ustory_123_test
+output: checkout ustory_123_test
+Switched to branch 'ustory_123_test'
+git pull
+input: git merge new_branch
+output: CONFLICT (add/add): Merge conflict in modified.txt
+Auto-merging modified.txt
+Automatic merge failed; fix conflicts and then commit the result.
+input:  cat modified.txt
+output: <<<<<<< HEAD
+modified first
+=======
+modified 26.10.2020
+>>>>>>> new_branch
+input: vim modified.txt
+output: [1]+  Stopped                 vim modified.txt
+ git add .
+git commit -m 'merged with fix conflict'
+[ustory_123_test 21ec5d1] merged with fix conflict
+$ git merge new_branch
+Already up to date.
+
