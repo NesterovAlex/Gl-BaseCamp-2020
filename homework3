@@ -204,3 +204,62 @@ error: pathspec 'redirect error and standart output to everything.log' did not m
  1 file changed, 2 insertions(+)
  create mode 100644 f1/evrything.log
  aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3/f1   dev  
+  ✘ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3/f1   dev  cd ../
+ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  ls
+f1  README.md
+ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  touch homework3
+ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  touch executableFile
+ ✘ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  su -
+Password: 
+su: Authentication failure
+ ✘ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  sudo passwd root
+New password: 
+Retype new password: 
+passwd: password updated successfully
+ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  ls -la
+total 32
+drwxrwxr-x 4 aleksandr aleksandr  4096 жов 31 19:59 .
+drwxrwxr-x 4 aleksandr aleksandr  4096 жов 31 16:55 ..
+-rw-rw-r-- 1 aleksandr aleksandr     0 жов 31 19:59 executableFile
+drwxrwxr-x 3 aleksandr aleksandr  4096 жов 31 19:24 f1
+drwxrwxr-x 8 aleksandr aleksandr  4096 жов 31 19:26 .git
+-rw-rw-r-- 1 aleksandr aleksandr 12058 жов 31 19:34 homework3
+-rw-rw-r-- 1 aleksandr aleksandr    29 жов 31 16:56 README.md
+ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  cmod +x executableFile
+zsh: command not found: cmod
+ ✘ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  chmod +x executableFile
+ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  ls -la
+total 32
+drwxrwxr-x 4 aleksandr aleksandr  4096 жов 31 19:59 .
+drwxrwxr-x 4 aleksandr aleksandr  4096 жов 31 16:55 ..
+-rwxrwxr-x 1 aleksandr aleksandr     0 жов 31 19:59 executableFile
+drwxrwxr-x 3 aleksandr aleksandr  4096 жов 31 19:24 f1
+drwxrwxr-x 8 aleksandr aleksandr  4096 жов 31 19:26 .git
+-rw-rw-r-- 1 aleksandr aleksandr 12058 жов 31 19:34 homework3
+-rw-rw-r-- 1 aleksandr aleksandr    29 жов 31 16:56 README.md
+ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  git status
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	executableFile
+	homework3
+
+nothing added to commit but untracked files present (use "git add" to track)
+ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  git add .
+ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev ✚  git status
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   executableFile
+	new file:   homework3
+
+ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev ✚  git commit -m 'create executableFile, change owner to root, add permission to execute file'
+[dev f2e482e] create executableFile, change owner to root, add permission to execute file
+ 2 files changed, 206 insertions(+)
+ create mode 100755 executableFile
+ create mode 100644 homework3
+ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  
+  aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev  cut unknownFile || touch ifCmd1FailsFileCreated
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+ aleksandr@aleksandr-VirtualBox  ~/HW3/GL-BaseCamp-2020-HW3   dev ± 
